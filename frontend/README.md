@@ -34,3 +34,6 @@
 **GitHub Pages**
 
 [Проект Mesto на gitHub](https://beez0mbie.github.io/react-mesto-auth)
+
+## PS
+Что бы пройти тесты нужно указывать в BASE_URL = localhost
