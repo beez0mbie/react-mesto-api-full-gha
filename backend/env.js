@@ -14,6 +14,7 @@ const allowedCors = [
   'localhost:3000',
   'http://127.0.0.1:3000',
   'mesto.ashmelkov.nomoredomainsicu.ru',
+  'https://github.com/',
 ];
 
 module.exports = {
