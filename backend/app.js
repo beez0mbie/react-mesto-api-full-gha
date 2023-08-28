@@ -5,6 +5,8 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const { celebrate, errors } = require('celebrate');
+const rateLimit = require('express-rate-limit');
+
 const router = require('./routes');
 const { login, logout, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
@@ -31,6 +33,10 @@ mongoose
 
 const app = express();
 
+/**
+ * CORS
+ */
+
 // const corsOptions = {
 //   origin: (origin, callback) => {
 //     if (allowedCors.indexOf(origin) !== -1) {
@@ -43,7 +49,7 @@ const app = express();
 //   credentials: true,
 // };
 
-const corsOptionsFoGitTest = {
+const corsOptionsForGitTest = {
   // git test faild with CORS thats why i used *
   origin: '*',
   methods: '*',
@@ -51,11 +57,27 @@ const corsOptionsFoGitTest = {
 };
 
 // app.use(cors(corsOptions));
-app.use(cors(corsOptionsFoGitTest));
+app.use(cors(corsOptionsForGitTest));
+
+/**
+ * Middlewares
+ */
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+app.use(limiter);
 app.use(helmet());
 app.use(express.json());
 app.use(cookieParser());
 app.use(requestLogger);
+
+/**
+ * Routes
+ */
 
 app.get('/crash-test', () => {
   setTimeout(() => {
@@ -68,6 +90,10 @@ app.get('/logout', logout);
 app.use(auth);
 app.use(router);
 
+/**
+ * Errors handlers
+ */
+
 app.use(errorLogger);
 app.use(errors());
 // eslint-disable-next-line no-unused-vars, max-len
@@ -75,6 +101,11 @@ app.use((err, _req, res, _next) => {
   // _next обязательно нужно указать 4 параметр что бы ошибки заработали
   handleErrors(err, res);
 });
+
+/**
+ * Run Server
+ */
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
