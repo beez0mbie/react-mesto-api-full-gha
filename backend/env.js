@@ -9,11 +9,14 @@ const {
 } = process.env;
 
 const allowedCors = [
-  'http://localhost:3000',
-  'http://localhost:3001',
   'localhost:3000',
+  'http://localhost:3000',
+  'https://localhost:3000',
+  '127.0.0.1:3000',
   'http://127.0.0.1:3000',
-  'mesto.ashmelkov.nomoredomainsicu.ru',
+  'https://127.0.0.1:3000',
+  'http://localhost:3001',
+  'https://mesto.ashmelkov.nomoredomainsicu.ru',
   'https://github.com/',
 ];
 
