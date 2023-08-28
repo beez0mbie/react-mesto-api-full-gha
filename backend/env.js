@@ -9,6 +9,7 @@ const {
 } = process.env;
 
 const allowedCors = [
+  'http://localhost:3000',
   'http://localhost:3001',
   'mesto.ashmelkov.nomoredomainsicu.ru',
 ];
