@@ -1,0 +1,100 @@
+/* normalize.css */
+
+@import url(./vendor/normalize.css);
+
+/* fonts */
+
+@import url(./vendor/fonts/Inter/inter.css);
+
+/* page */
+
+@import url(./blocks/page/page.css);
+
+/* header */
+
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__auth-container/header__auth-container.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__action/header__action.css);
+@import url(./blocks/header/__logo-container/header__logo-container.css);
+@import url(./blocks/header/__hamburger/header__hamburger.css);
+@import url(./blocks/header/__hamburger/_active/header__hamburger_active.css);
+@import url(./blocks/header/__auth-container/_active/header__auth-container_active.css);
+
+/* sign */
+@import url(./blocks/sign/sign.css);
+@import url(./blocks/sign/__title/sign__title.css);
+@import url(./blocks/sign/__form/sign__form.css);
+@import url(./blocks/sign/__field/sign__field.css);
+@import url(./blocks/sign/__input/sign__input.css);
+@import url(./blocks/sign/__button/sign__button.css);
+@import url(./blocks/sign/__signin-link/sign__signin-link.css);
+@import url(./blocks/sign/__signin/sign__signin.css);
+@import url(./blocks/sign/__signin-desc/sign__signin-desc.css);
+
+/* content */
+
+@import url(./blocks/content/content.css);
+
+/* profile */
+
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__add-button/profile__add-button.css);
+@import url(./blocks/profile/__edit-button/profile__edit-button.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__logo-container/profile__logo-container.css);
+@import url(./blocks/profile/__logo/profile__logo.css);
+@import url(./blocks/profile/__subtitle/profile__subtitle.css);
+@import url(./blocks/profile/__title-container/profile__title-container.css);
+@import url(./blocks/profile/__title/profile__title.css);
+
+/* cards */
+
+@import url(./blocks/cards/cards.css);
+
+/* card */
+
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__heart/card__heart.css);
+@import url(./blocks/card/__heart-container/card__heart-container.css);
+@import url(./blocks/card/__heart-counter/card__heart-counter.css);
+@import url(./blocks/card/__heart/_active/card__heart_active.css);
+@import url(./blocks/card/__image/card__image.css);
+@import url(./blocks/card/__info/card__info.css);
+@import url(./blocks/card/__title/card__title.css);
+@import url(./blocks/card/__trash/card__trash.css);
+
+/* footer */
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
+
+/* popup */
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__close-button/popup__close-button.css);
+@import url(./blocks/popup/__container/popup__container.css);
+
+/* popup-form */
+@import url(./blocks/popup-form/popup-form.css);
+@import url(./blocks/popup-form/__button/popup-form__button.css);
+@import url(./blocks/popup-form/__fieldset/popup-form__fieldset.css);
+@import url(./blocks/popup-form/__input/popup-form__input.css);
+@import url(./blocks/popup-form/__title/popup-form__title.css);
+@import url(./blocks/popup-form/__field/popup-form__field.css);
+@import url(./blocks/popup-form/__input-error/popup-form__input-error.css);
+@import url(./blocks/popup-form/__input-error/_active/popup-form__input-error_active.css);
+@import url(./blocks/popup-form/__input/_type/popup-form__input_type_error.css);
+@import url(./blocks/popup-form/__button/_disabled/popup-form__button_disabled.css);
+@import url(./blocks/popup/_overlay/popup_overlay_dark.css);
+
+/* popup-img */
+@import url(./blocks/popup-img/popup-img.css);
+@import url(./blocks/popup-img/__image/popup-img__image.css);
+@import url(./blocks/popup-img/__figcaption/popup-img__figcaption.css);
+
+/* popup-info */
+@import url(./blocks/popup-info/popup-info.css);
+@import url(./blocks/popup-info/__svg/popup-info__svg.css);
+@import url(./blocks/popup-info/__title/popup-info__title.css);

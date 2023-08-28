@@ -1,0 +1,7 @@
+.header__logo-container {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+}

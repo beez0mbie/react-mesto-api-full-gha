@@ -1,0 +1,19 @@
+.sign__input {
+  padding-bottom: 13px;
+  border: 0;
+  background-color: #000;
+  color: #ccc;
+  border-bottom: solid 2px #ccc;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.sign__input::placeholder {
+  color: #ccc;
+}
+
+.sign__input:focus {
+  outline: none;
+}

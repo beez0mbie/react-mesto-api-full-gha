@@ -1,0 +1,22 @@
+.profile__logo-container {
+  margin: 0;
+  width: 120px;
+  position: relative;
+  color: #ffffff;
+}
+
+.profile__logo-container:after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background: url(../../../images/Pensil.svg) no-repeat center rgba(0, 0, 0, 0.8);
+}
+
+.profile__logo-container:hover.profile__logo-container:after {
+  opacity: 1;
+  cursor: pointer;
+}

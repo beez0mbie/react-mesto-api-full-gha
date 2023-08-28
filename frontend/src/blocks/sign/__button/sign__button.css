@@ -1,0 +1,27 @@
+.sign__button {
+  cursor: pointer;
+  margin-top: 216px;
+  min-height: 50px;
+  border: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+  transition: opacity 0.3s;
+}
+
+.sign__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 770px) {
+  .sign__button {
+    min-height: 46px;
+    margin-top: 173px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
