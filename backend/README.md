@@ -17,3 +17,6 @@
 
 ## Ссылка на репозиторий
 [express-mesto-gha](https://github.com/beez0mbie/express-mesto-gha)
+
+## PS
+Что бы пройти гит тесты нужно корсы разрешать всем
