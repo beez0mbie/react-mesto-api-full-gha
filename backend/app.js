@@ -28,16 +28,17 @@ mongoose
 const app = express();
 
 const corsOptions = {
-  // origin: (origin, callback) => {
-  //   if (allowedCors.indexOf(origin) !== -1) {
-  //     callback(null, true);
-  //   } else {
-  //     callback(new Error('Not allowed by CORS'));
-  //   }
-  // },
-  // methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
-  origin: '*',
-  methods: '*',
+  origin: (origin, callback) => {
+    console.log(origin);
+    if (allowedCors.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
+  // origin: '*',
+  // methods: '*',
   credentials: true,
 };
 
