@@ -12,7 +12,11 @@ const handleErrors = require('./utils/errors');
 const { signUp, signIn } = require('./utils/routerValidations');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT, MONGODB_URL } = require('./env');
+const {
+  PORT,
+  MONGODB_URL,
+  // allowedCors,
+} = require('./env');
 
 mongoose
   .connect(MONGODB_URL, {
@@ -27,22 +31,27 @@ mongoose
 
 const app = express();
 
-const corsOptions = {
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (allowedCors.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
+//   credentials: true,
+// };
+
+const corsOptionsFoGitTest = {
   // git test faild with CORS thats why i used *
-  // origin: (origin, callback) => {
-  //   if (allowedCors.indexOf(origin) !== -1) {
-  //     callback(null, true);
-  //   } else {
-  //     callback(new Error('Not allowed by CORS'));
-  //   }
-  // },
-  // methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
   origin: '*',
   methods: '*',
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors(corsOptionsFoGitTest));
 app.use(helmet());
 app.use(express.json());
 app.use(cookieParser());

@@ -106,8 +106,14 @@ function App() {
   };
 
   const handleExit = () => {
-    apiAuth.logout();
-    setIsLoggedIn(false);
+    apiAuth
+      .logout()
+      .then((res) => {
+        if(res) {
+          setIsLoggedIn(false);
+        }
+      })
+      .catch((err) => console.error(`Error api.logout():\n ${err}`));
   };
 
   const handleSetEmail = (email) => {

@@ -10,7 +10,9 @@ const {
 
 const allowedCors = [
   'http://localhost:3000',
+  'http://localhost:3001',
   'https://mesto.ashmelkov.nomoredomainsicu.ru',
+  'https://api.mesto.ashmelkov.nomoredomainsicu.ru',
 ];
 
 module.exports = {
